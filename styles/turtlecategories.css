@@ -1,0 +1,215 @@
+*{
+    margin:7px;
+    padding:0%;
+}
+body{
+    background-color: powderblue;
+}
+
+/*navigation*/
+nav{
+    width:100%;
+    height:70px;
+}
+.header{                            
+    margin: 0%;
+    width: 100%;
+    padding: 20px 2%;
+    background-color: #040c66;
+    display: flex;
+}
+nav .mydiv h1{
+    font-weight: 900;
+    color:white;
+    float:left;
+    text-transform: uppercase;
+}
+.navbar{
+    width:80%;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/*Dropdown button*/
+.dropbtn{
+    background-color: rgb(167, 195, 219);
+    color:black;
+    padding:16px;
+    font-size:16px;
+    border:none;
+}
+/*Dropdown*/
+.dropdown{
+    position:relative;
+    display:inline-block;
+}
+/*Dropdown Content*/
+.dropdown-content{
+   display: none;
+   position:absolute;
+   background-color: rgb(167, 195, 219);
+   min-width: 160px;
+   box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+   list-style-type: none;
+}
+/*show dropdown menu*/
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+.type{
+    margin-left: 20px;
+    text-size-adjust: 100;
+    font-size: large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p{
+    text-align: justify;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Google map*/
+.iframe{
+    width:50px;
+    height:50px;
+}
+
+/*Paragraphs*/
+.para1, .para2 , .para3 , .para4 , .para5{
+    background-color:rgb(217, 182, 140);
+    width:1250px;
+    height:600px;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+.para6, .para7, .para8{
+    background-color:rgb(170, 128, 72);
+    width:1250px;
+    height:400px;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+/*table*/
+table{
+    border-collapse: initial;
+    width:"100%";
+    border-style:groove;
+    border-color:black;
+    text-align:center;
+    margin-left:3%;
+    margin-right:3%;
+    column-width:100px;
+}
+th{
+    text-transform: capitalize;
+    font-size: 30px;
+    color:black;
+    text-align: center;
+}
+td{
+    color:black;
+    padding:8px;
+    border:3px solid rgb(85, 109, 147);
+    text-align:justify;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*table footer*/
+tfoot{
+    font-size: 18px;
+    background-color:cadetblue;
+}
+
+
+/*heading*/
+h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/*Footer information*/
+.footer{
+    margin: 0%;
+    margin-top: 150px;
+    width: 100%;
+    padding: 100px 15%;
+    background-color: #333;
+    color: #efefef;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer div{
+    text-align: center;
+}
+
+.col-2{
+    flex-grow: 0.5;
+}
+
+.footer div h3{
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.col-1 a{
+    display:block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: aliceblue;
+}
+
+form input{
+    width:400px;
+    height:45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+
+form.button{
+    background: transparent;
+    border:2px;
+    color:#fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.fpara{
+        text-align: center;
+        font-size: 15px;
+        font-family: 'Times New Roman', Times, serif;
+    
+}
+
+
+
+
+/*Media Queries*/
+@media only screen and (max-width:600px){
+    body{
+        background-color: rgb(152, 186, 198);
+    }
+    
+        
+}

@@ -1,0 +1,192 @@
+body{
+    background-color: rgb(130, 198, 198);
+}
+nav{
+    width:100%;
+    height:70px;
+}
+
+
+.header{                            
+    margin: 0%;
+    width: 100%;
+    padding: 20px 2%;
+    height: 150px;
+    background-color: #040c66;
+    display: flex;
+}
+
+
+nav .mydiv h1{
+    font-weight: 900;
+    color:white;
+    float:left;
+    text-transform: uppercase;
+    display: flex;
+    font-size:xx-large;
+}
+
+img{
+    margin-top: 8px;
+}
+
+.header1 p{
+    color:rgb(199, 173, 89);
+    float:left;
+    display: flex;
+    font-size: 20px;
+}
+
+.contents{
+    margin-left: 500px;
+}
+
+.navbar{
+    width:80%;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.header1 a{
+    color:rgb(199, 173, 89);
+    float:left;
+    display: flex;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+/*calendar*/
+.calendar{
+   width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0px 0px 10px;
+    border-radius:10px;
+    position: relative;
+    align-content: center 
+}
+
+input[type="date"]{
+    width: 50%;
+    height: 30px;
+}
+
+/*Guests*/
+.guests{
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0px 0px 10px;
+    border-radius:10px;
+    position: relative;
+    align-content: center;
+}
+
+label{
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="number"]{
+    width: 50%;
+    height: 30px;
+    margin-top: 5px;
+}
+
+input[type="submit"]{
+    width: 50%;
+    height: 30px;
+    background-color: #c2d4e8; 
+    font-weight: 550;
+    font-size:medium;
+}
+/*Duration*/
+.duration{
+   width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0px 0px 10px;
+    border-radius:10px;
+    position: relative;
+    align-content: center;
+    height: min-content;
+}
+
+.time{
+    width: 50%;
+    height: 130px;
+}
+
+/*Price list table*/
+.pricelist{
+    align-items: center;
+    margin-left: 300px;
+}
+.pricelist th{
+    width: 300px;
+    margin: auto;
+    padding: 2px;
+    border: 1px solid black;
+    background-color:darkseagreen;
+    position: relative;
+    text-align: center;
+    align-content: center;
+}
+.pricelist td{
+    width: 300px;
+    margin: auto;
+    padding: 2px;
+    border: 1px solid black;
+    background-color:thistle;
+    text-decoration: solid;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    text-align: center;
+    align-content: center; 
+}
+
+/*Summary Table*/
+.summary{
+    border-collapse: collapse;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-left: 700px;
+    
+}
+.summary th{
+    width: 300px;
+    margin: auto;
+    padding: 2px;
+    background-color:burlywood;
+    border: 1px solid black;
+    position: relative;
+    text-align: left;
+    align-content: center;
+    font-size: larger;
+}
+.summary td{
+    width: 300px;
+    margin: auto;
+    padding: 2px;
+    background-color: #c2d4e8;
+    border: 1px solid black;
+    position: relative;
+    text-align: left;
+    align-content: center;
+    font-size:larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.button{
+    align-content: center;
+    text-align: center;
+    text-decoration: none;
+}
