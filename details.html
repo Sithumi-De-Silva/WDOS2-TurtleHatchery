@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Details Page</title>
+        <meta name="view content" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/details.css">
+        <link rel="stylesheet" href="international-telephone-input.css">
+        
+        
+    
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="header">
+                <div class="mydiv">
+                    <div class="contents">
+                    &nbsp; <img src="Images/turtle logo.png" width="50px" height="50px" alt="logo" class="logo">
+                <h1><b>Buy Tickets</b></h1>
+                <div class="header1">
+                    <p><a href="index.html" class="homebutton">
+                       &gt;Home &nbsp;</a> &gt; Tickets &nbsp;<b>Details &nbsp;</b> &nbsp;&gt; Payment &nbsp;&gt; Confirmation</p>
+                </div>
+                </div>
+                </div>
+                </div>
+        
+        </nav>
+        </header>
+        <br> <br><br><br><br><br><br><br><br><br>
+       <!--Summary Table-->
+       <div id="summary-details">
+       <table>
+        <tr>
+            <td>Date</td>
+            <td id="date"></td>
+        </tr>
+        <tr>
+            <td>Time</td>
+            <td id="thours"></td>
+        </tr>
+        <tr>
+            <td>Duration</td>
+            <td id="duration"></td>
+        </tr>
+        <tr>
+            <th>Tickets</th>
+            <th>Charges</th>
+        </tr>
+        <tr id="slAdult">
+            <td id="sladultSummary">SL Adult</td>
+            <td id="sladultSummaryPrice"></td>
+        </tr>
+        <tr id="slChild">
+            <td id="slchildSummary">SL Child</td>
+            <td id="slchildSummaryPrice"></td>
+        </tr>
+        <tr id="fAdult">
+            <td id="fadultSummary">Foreigner Adult</td>
+            <td id="fadultSummaryPrice"></td>
+        </tr>
+        <tr id="fChild">
+            <td id="fchildSummary">Foreigner Child</td>
+            <td id="fchildSummaryPrice"></td>
+        </tr>
+        <tr id="infant">
+            <td id="infantSummary">Infant</td>
+            <td id="infantSummaryPrice"></td>
+        </tr>
+        <tr>
+            <th>Total Payable</th>
+            <th id="totalpayableSummary">$0</th>
+        </tr>
+    </table>
+    </div>
+    <br><br><br>
+       
+    <!--Details form-->
+       
+       <div class="container">
+        <form method="get" id="detailsForm">
+            <fieldset>
+                <legend><h2><b>Your Details</b></h2></legend>
+                
+                <div class="detailsform">
+                 <label for="fname">Full Name:</label><br>
+                 <input type="text" id="fname" name="fname" required><br><br>
+                 <div class="error-message" id="fnameError"></div>
+                 </div>
+
+                 <div class="iti">
+                 
+                    <label for="mnumber">Mobile Number:</label><br>
+                    <style>
+
+                
+                        .iti {
+                            position: relative;
+                            display: inline-block;
+                        }
+                
+                        input[type=tel] {
+                            padding-right: 6px;
+                            padding-left: 52px;
+                            margin-left: 0;
+                
+                            position: relative;
+                            z-index: 0;
+                            margin-top: 0 !important;
+                            margin-bottom: 0 !important;
+                            margin-right: 0;
+                            border: 1px solid #CCC;
+                            width: 270px;
+                            height: 35px;
+                            /* padding: 6px 12px; */
+                            border-radius: 2px;
+                            font-family: inherit;
+                            font-size: 100%;
+                            color: inherit;
+                        }
+                
+                        button {
+                            color: #FFF;
+                            background-color: #428BCA;
+                            border: 1px solid #357EBD;
+                            height: 39px;
+                            margin: 0;
+                            padding: 6px 20px;
+                            border-radius: 2px;
+                            font-family: inherit;
+                            font-size: 100%;
+                        }
+                
+                        button:hover {
+                            background-color: #3276B1;
+                            border-color: #285E8E;
+                            cursor: pointer;
+                        }
+                    </style>
+                    <div class="iti">
+                        <input  type="tel" id="mobile" name="mnumber">
+                    </div>
+                    <div class="error-message" id="mnumberError"></div>
+                
+                </div>
+            
+                <div class="detailsform">
+                 <label for="email">Email:</label><br>
+                 <input type="email" id="email" name=email required><br><br>
+                 <div class="error-message" id="emailError"></div>
+                 </div>
+
+                 <div class="detailsform">
+                 <label for="cemail">Confirm Email:</label><br>
+                 <input type="email" id="cemail" name="cemail" required><br><br>
+                 <div class="error-message" id="cemailError"></div>
+                 </div>
+
+                 <div class="detailsform">
+                 <label for="gender">Gender:</label><br>
+                 <select name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                 </select>
+                </div>
+                <br><br>
+            </fieldset>
+         </form>
+     </div>
+        <br><br><br>
+        <div class="button">
+            <button type="button" id="saveDetailsButton" disabled>
+                <a href="payment.html">Continue with Purchase</a>
+            </button>
+        </div>
+        <script src="javascript/details.js"></script>
+        <script src="international-telephone-input.js"></script>
+        
+    </body>
+</html>

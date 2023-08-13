@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Payment Page</title>
+        <meta name="view content" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/payment.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="header">
+                <div class="mydiv">
+                    <div class="contents">
+                    &nbsp; <img src="Images/turtle logo.png" width="50px" height="50px" alt="logo" class="logo">
+                <h1><b>Buy Tickets</b></h1>
+                <div class="header1">
+                    <p><a href="index.html" class="homebutton">
+                       &gt;Home &nbsp;</a> &gt; Tickets &nbsp;&gt; Details</b> &nbsp;<b>Payment &nbsp;</b> &nbsp;&gt; Confirmation</p>
+                </div>
+                </div>
+                </div>
+                </div>
+        
+        </nav>
+        </header>
+        <br><br><br><br><br><br><br><br>
+        <div class="subheading">
+        <h2><b><u>Payment Details</u></b></h2>
+        </div>
+        <br><br>
+        
+        <!--Summary Table-->
+        <div id="summary-details">
+        <table>
+            <tr>
+                <td>Date</td>
+                <td id="date"></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td id="thours"></td>
+            </tr>
+            <tr>
+                <td>Duration</td>
+                <td id="duration"></td>
+            </tr>
+            <tr>
+                <th>Tickets</th>
+                <th>Charges</th>
+            </tr>
+            <tr id="slAdult">
+                <td id="sladultSummary">SL Adult</td>
+                <td id="sladultSummaryPrice"></td>
+            </tr>
+            <tr id="slChild">
+                <td id="slchildSummary">SL Child</td>
+                <td id="slchildSummaryPrice"></td>
+            </tr>
+            <tr id="fAdult">
+                <td id="fadultSummary">Foreigner Adult</td>
+                <td id="fadultSummaryPrice"></td>
+            </tr>
+            <tr id="fChild">
+                <td id="fchildSummary">Foreigner Child</td>
+                <td id="fchildSummaryPrice"></td>
+            </tr>
+            <tr id="infant">
+                <td id="infantSummary">Infant</td>
+                <td id="infantSummaryPrice"></td>
+            </tr>
+            <tr>
+                <th>Total Playable</th>
+                <th id="totalplayableSummary">$0</th>
+            </tr>
+        </table>
+        </div>
+        <br><br><br>
+
+        <!--Payment form-->
+        <div class="paymentForm">
+        <form method="get" id="paymentform">
+           <fieldset>
+            <div class="payment-form">
+            <label for="cnumber">Card Number</label><br>
+            <input type="number" id="cnumber" name="cnumber"  min="16" max="16" required placeholder="0000 0000 0000 0000"><br><br>
+            <div class="error-message" id="cnumberError"></div>
+            </div>
+             
+            <div class="payment-form">
+            <label for="expdate">Expiry date</label><br>
+            <input type="month" id="expdate" name="expdate" required placeholder="MM/YY"><br><br>
+            <div class="error-message" id="expdateError"></div>
+            </div>
+            
+            <div class="payment-form">
+            <label for="cvv">CVC/CVV</label><br>
+            <input type="number" id="cvv" name="cvv" min="4" max="4" required placeholder="CVC/CVV"><br><br>
+            <div class="error-message" id="cvvError"></div>
+            </div>
+
+            <div class="payment-form">
+            <label for="cvv">Name on card</label><br>
+            <input type="text" id="cname" name="cname" required placeholder="John Doe"><br><br>
+            <div class="error-message" id="cnameError"></div>
+            </div>
+
+            <div class="button">
+                <button type="button" id="payButton" disabled>
+                    <a href="confirmation.html">Pay $</a>
+                </button>
+                </div>
+
+         </fieldset>
+        </form>
+        </div>
+        <script src="javascript/payment.js"></script>
+     </body>
+</html>

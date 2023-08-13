@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tickets Page</title>
+        <meta name="view content" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/tickets.css">
+       
+    <body>
+        <header>
+            <nav>
+                <div class="header">
+                <div class="mydiv">
+                    <div class="contents">
+                    &nbsp; <img src="Images/turtle logo.png" width="50px" height="50px" alt="logo" class="logo">
+                <h1><b>Buy Tickets</b></h1>
+                <div class="header1">
+                    <p><a href="index.html" class="homebutton">
+                       &gt;Home &nbsp;</a> &nbsp;<b>Tickets &nbsp;</b>&nbsp;&gt; Details </b> &nbsp;&gt; Payment &nbsp; &nbsp;&gt; Confirmation</p>
+                </div>
+                </div>
+                </div>
+                </div>
+        
+        </nav>
+        </header>
+        <br><br><br><br><br><br><br><br>
+       
+        <form method="get" id="calendar">
+            <!--Calendar form-->
+            <div class="calendar">
+                <fieldset>
+                 <legend><h2>When are you coming?</h2></legend>
+                <input class="date" type="date">
+               </fieldset> 
+            </div>
+            <br><br>
+
+            <!--Guests form-->
+            <div class="guests">
+            <fieldset>
+            <legend><h2>Guests</h2></legend>
+               <label for="sladult">Sri Lankan Adult:</label>
+               <input type="number" id="sladult" name="sladult" value="0" min="0"><br>
+
+               <label for="slchild">Sri Lankan Child:</label>
+               <input type="number" id="slchild" name="slchild" value="0" min="0"><br>
+
+               <label for="fadult">Foreigner Adult:</label>
+               <input type="number" id="fadult" name="fadult" value="0" min="0"><br>
+
+               <label for="fchild">Foreigner Child:</label>
+               <input type="number" id="fchild" name="fchild" value="0" min="0"><br>
+
+               <label for="infant">Infant:</label>
+               <input type="number" id="infant" name="infant" value="0" min="0"><br>
+               <br><br>
+               
+               
+                 </fieldset>
+                </div>
+                <br><br>
+
+                 <!--Price list table-->
+        <div class="pricelist">
+            <table>
+                <tr>
+                <th>Guest</th>
+                <th>Charge per one</th>
+                <th>Hour</th>
+                </tr>
+                <tr>
+                    <td>Foreigner Adult</td>
+                    <td>10 USD</td>
+                    <td>Normal</td>
+                </tr>
+                <tr>
+                    <td>Foreigner Adult</td>
+                    <td>13 USD</td>
+                    <td>Peak</td>
+                </tr>
+                <tr>
+                    <td>Foreigner Child</td>
+                    <td>5USD</td>
+                    <td>Normal</td>
+                </tr>
+                <tr>
+                    <td>Foreigner Child</td>
+                    <td>8 USD</td>
+                    <td>Peak</td>
+                </tr>
+                <tr>
+                    <td>SL Adult</td>
+                    <td>4 USD</td>
+                    <td>Normal</td>
+                </tr>
+                <tr>
+                    <td>SL Adult</td>
+                    <td>6 USD</td>
+                    <td>Peak</td>
+                </tr>
+                <tr>
+                    <td>SL Child</td>
+                    <td>2 USD</td>
+                    <td>Normal</td>
+                </tr>
+                <tr>
+                    <td>SL Child</td>
+                    <td>3 USD</td>
+                    <td>Peak</td>
+                </tr>
+                <tr>
+                    <td>Infant(under 4 yrs)</td>
+                    <td>Normal/Peak</td>
+                    <td>FREE</td>
+                </tr>
+            </table>
+            </div>
+            <br><br><br>
+
+            <!--Duration form-->
+            <div class="duration">
+            <fieldset>
+            <legend><h2>Duration</h2></legend>
+            
+                <h3>Select a time </h3>
+                <select name="time" class="time" multiple onchange="updateDuration(this)">
+                <option  value="07:00 AM to 08:00 AM" >07:00 AM to 08:00 AM</option><br>
+                <option value="08:00 AM to 09:00 AM" >08:00 AM to 09:00 AM</option><br>
+                <option value="09:00 AM to 10:00 AM" >09:00 AM to 10:00 AM</option><br>
+                <option value="10:00 AM to 11:00 AM" >10:00 AM to 11:00 AM (PEAK)</option><br>
+                <option value="11:00 AM to 12:00 PM" >11:00 AM to 12:00 PM (PEAK)</option><br>                
+                <option value="12:00 PM to 01:00 PM" >12:00 PM to 01:00 PM (PEAK)</option><br>                
+                <option value="01:00 PM to 02:00 PM" >01:00 PM to 02:00 PM</option><br>
+                <option value="02:00 PM to 03:00 PM" >02:00 PM to 03:00 PM</option><br>
+                <option value="03:00 PM to 04:00 PM" >03:00 PM to 04:00 PM (PEAK)</option><br>
+                <option value="04:00 PM to 05:00 PM" >04:00 PM to 05:00 PM (PEAK)</option><br>
+                <option value="05:00 PM to 06:00 PM" >05:00 PM to 06:00 PM (PEAK)</option><br>
+            </select>
+            </fieldset>
+            </div>
+        </form>
+        <br><br>
+        
+       
+        <br><br><br>
+
+        <!--Summary Table-->
+        <table class="summary" id="summary">
+            <tr>
+                <td>Date</td>
+                <td id="date"></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td id="thours"></td>
+            </tr>
+            <tr>
+                <td>Duration</td>
+                <td id="duration"></td>
+            </tr>
+            <tr>
+                <th>Tickets</th>
+                <th>Charges</th>
+            </tr>
+            <tr id="slAdult">
+                <td id="sladultSummary">SL Adult</td>
+                <td id="sladultSummaryPrice"></td>
+            </tr>
+            <tr id="slChild">
+                <td id="slchildSummary">SL Child</td>
+                <td id="slchildSummaryPrice"></td>
+            </tr>
+            <tr id="fAdult">
+                <td id="fadultSummary">Foreigner Adult</td>
+                <td id="fadultSummaryPrice"></td>
+            </tr>
+            <tr id="fChild">
+                <td id="fchildSummary">Foreigner Child</td>
+                <td id="fchildSummaryPrice"></td>
+            </tr>
+            <tr id="infant">
+                <td id="infantSummary">Infant</td>
+                <td id="infantSummaryPrice"></td>
+            </tr>
+            <tr>
+                <th>Total Payable</th>
+                <th id="totalpayableSummary">$0</th>
+            </tr>
+        </table>
+            <br><br>
+            <div class="button" id="purchase-button">
+        <button type="button" disabled>
+            <a href="details.html">Continue with Purchase</a>
+        </button>
+        </div>
+       
+        <script src="javascript/tickets.js"></script>
+    </body>
+</html>
